@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .github-link {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+      font-size: 18px;
+      text-decoration: none;
+      color: #000000;
+    }
+    .github-link img {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+  </style>
+</head>
+<body>
+    <h1>1～20までのFizzBuzz</h1>
+    <ul id="fizzbuzz-list"></ul>
+
+    <script>
+        const list = document.getElementById('fizzbuzz-list');
+
+        for (let i = 1; i <= 20; i++) {
+        const item = document.createElement('li');
+
+        if (i % 3 === 0 && i % 5 === 0) {
+            item.textContent = 'FizzBuzz';
+        } else if (i % 3 === 0) {
+            item.textContent = 'Fizz';
+        } else if (i % 5 === 0) {
+            item.textContent = 'Buzz';
+        } else {
+            item.textContent = i;
+        }
+        console.log(`Item ${i}: ${item.textContent}`); // コンソールに出力
+        
+
+        list.appendChild(item);
+        }
+        //3と5の倍数の時はFizzBuzzと表示
+        //3の倍数の時はFizzと表示
+        //5の倍数の時はBuzzと表示
+        //それ以外は数字を表示
+
+        
+    </script>
+
+    <!-- GitHubリンク -->
+    <a class="github-link" href="https://github.com/ユーザー名/リポジトリ名" target="_blank">
+        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub">
+        GitHubで見る
+    </a>
+</body>
+</html>
